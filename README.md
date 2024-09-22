@@ -33,7 +33,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 </body>
 </html>
 
-<h2>Formulir Perpustakaan iain fattahul muluk papua</h2>
+<h2>Formulir Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</h2>
     <form action="#" method="post">
         <table>
             <tr>
@@ -120,31 +120,31 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Pemrograman Web Dasar</td>
-                <td>Andi Saputra</td>
-                <td>Media Press</td>
-                <td>2020</td>
+                <td>Laut Bercerita</td>
+                <td>Leila S. Chudori</td>
+                <td>KPG (Kepustakaan Populer Gramedia)</td>
+                <td>2017</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>Pengenalan HTML dan CSS</td>
-                <td>Budi Santoso</td>
-                <td>Ilmu Komputer</td>
-                <td>2021</td>
+                <td>Hujan Bulan Juni</td>
+                <td>Sapardi Djoko Damono</td>
+                <td>Gramedia Pustaka Utama</td>
+                <td>1994</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>JavaScript untuk Pemula</td>
-                <td>Siti Rahmawati</td>
-                <td>Edu Books</td>
-                <td>2019</td>
+                <td>Robohnya Surau Kami</td>
+                <td>AA Navis</td>
+                <td>Pustaka Jaya</td>
+                <td>1970</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td>Database dan SQL</td>
-                <td>Joko Widodo</td>
-                <td>Tech Press</td>
-                <td>2022</td>
+                <td>Ronggeng Dukuh Paruk</td>
+                <td>Ahmad Tohari</td>
+                <td>Pustaka Jaya</td>
+                <td>1982</td>
             </tr>
         </tbody>
     </table>
