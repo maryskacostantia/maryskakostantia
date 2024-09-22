@@ -6,18 +6,8 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"widht="678"height="452>
-
-
-
               
-# Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
-
-
-
-
-_Please note that some of the links in each chapter do not work when reading the book on Github. This is because those links are intended for the print and ebook editions of the book and only work when all the chapters are rendered together. Unfortunatelly, Github does not have the ability to render the complete book at once._
-
-## Where is the PDF?
+## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
 **The current edition is not available as a PDF, deliberately**. Why? Because the publisher (O'Reilly Media) is a for-profit publisher who puts considerable resources behind producing, editing and distributing this book. The third edition of "Mastering Bitcoin" is available under a CC-BY-NC-ND license, not a CC-BY-SA license. The book will eventually (within a year of publication) be released under a CC-BY-SA license, at which point PDF copies and translations will be allowed (a PDF is a "derivative" product, which is what the "ND-NoDerivatives" part of the license prohibits). 
 
