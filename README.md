@@ -2,15 +2,15 @@
 # Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
 Selamat Datang Di Perpustakaan Maryska Kostantia!
-Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya. Berikut ini adalah gambar dari gedung Perpustakaan Universitas Indonesia.
+Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya, karena saya baru belajar tentang cara membuat website perpustakaan Universitas Muhammadiyah Yogyakarta (UMY) * [Amazon](https://library.umy.ac.id/)
 
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"/>
               
 ## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
-* [video profil](https://youtu.be/UnKv-MU1vUk)
-* [Amazon](https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1098150090)
+* [video profil perpustakaan umy](https://youtu.be/UnKv-MU1vUk)
+* [Amazon](https://library.umy.ac.id/)
 * [Barnes and Noble](https://www.barnesandnoble.com/w/mastering-bitcoin-andreas-m-antonopoulos/1126323222?ean=9781098150051)
 
 The tag [third_edition_print_1](https://github.com/bitcoinbook/bitcoinbook/releases/tag/third_edition_print1) corresponds to the first print of the third edition of Mastering Bitcoin as published in paperback and ebook by O'Reilly Media in December 2023.
