@@ -8,23 +8,17 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"/>
 
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AUDIO/VIDEO AUTOPLAY</title>
+</head>
 <body>
-       <video widht="320"height="240" controls>
-       <source src="Profile Perpustakaan UMY.mp4"type="video/mp4>
-              </video>
-
-
-<h1>Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</h1>
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://youtu.be/UnKv-MU1vUk?si=6jCAOvv7gZMn9uSR" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
+  <h1>AUDIO/VIDEO AUTOPLAY</h1>
+  <video widht="320" height="240" controls>
+    <source src="Profile Perpustakaan UMY.mp4"type="video/mp4>
+           </video>
+  </audio>
 </body>
 
 <html lang="en">
@@ -36,7 +30,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
   <h1>AUDIO/VIDEO AUTOPLAY</h1>
   <audio controls>
     <source src="start.mp3"type=audio/mpeg>
-  </audio>
+   </audio>
 </body>
 </html>
 
