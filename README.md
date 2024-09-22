@@ -8,7 +8,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"/>
               
-# Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
+## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
 <h1>Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</h1>
   <iframe 
@@ -21,14 +21,6 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
     allowfullscreen>
   </iframe>
 </body>
-
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Mastering Bitcoin: Programming the Open Blockchain (Third Edition)</span> by <span property="cc:attributionName">Andreas M. Antonopoulos, David A. Harding</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg"></a></p> 
-
-# Other Editions and Languages
-
-## Mastering Bitcoin - First Edition
-
-The tags [Edition1Print1](https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print1), [Edition1Print2](https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print2) correspond to the two existing prints of Mastering Bitcoin (First Edition) as published by O'Reilly Media.
 
 <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering Bitcoin - First Edition</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://aantonop.com/books" property="cc:attributionName" rel="cc:attributionURL">aantonop Books LLC</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
