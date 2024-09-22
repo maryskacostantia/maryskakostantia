@@ -28,16 +28,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <body>
   <h1>mari coba</h1>
   <audio controls>
-         <source src="https://youtu.be/cpMjxfl6_o4?si=_GNAVklt-bejE7hv.mp3">
+         <source src="start.mp3" type="audio/mp3">
   </audio>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-</head>
-<audio autoplay
-<source src="start.mp3" type="audio/mp3
-</audio>
 </body>
 </html>
