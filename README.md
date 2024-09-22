@@ -6,10 +6,6 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"/>
-       <img src="images.jpeg" alt=perpustakaan umy"/>
-       <img src="images.jpeg"widht=678"height="452"/>
-       <img  src = "images.jpeg" alt="perpustakaan umy" widht="678" height="452"/>
-
               
 ## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
@@ -33,7 +29,7 @@ The tags [Edition1Print1](https://github.com/bitcoinbook/bitcoinbook/releases/ta
 
 The tags, [second_edition_print_1](https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print_1)  [second_edition_print2](https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print2),  [second_edition_print3](https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print3), correspond to the first (June 8th, 2017), second (July 20th, 2017) and third (March  23rd, 2018) print of Mastering Bitcoin (Second Edition), as published by O'Reilly Media.
 
-<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering Bitcoin - Second Edition</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://aantonop.com/books" property="cc:attributionName" rel="cc:attributionURL">aantonop Books LLC</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="perpustakaan umy" widht="678" height="452"/>/></a><br /><span xmlns:dct="https://purl.org/dc/terms/" href="https://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Mastering Bitcoin - Second Edition</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://aantonop.com/books" property="cc:attributionName" rel="cc:attributionURL">aantonop Books LLC</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 Mastering Bitcoin (Open Second Edition), based on the Seond Edition, is also available in English and Spanish at https://aantonop.com. Mastering Bitcoin 2nd Edition is also published in German, Polish, Japanese, Korean, Chinese and other languages by publishers in the respective countries.
 
