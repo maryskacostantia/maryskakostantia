@@ -8,7 +8,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"/>
               
-## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
+# Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
 <h1>Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</h1>
   <iframe 
@@ -21,12 +21,6 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
     allowfullscreen>
   </iframe>
 </body>
-
-* [video profil perpustakaan umy](https://youtu.be/UnKv-MU1vUk)
-* [Amazon](https://library.umy.ac.id/)
-* [Barnes and Noble](https://www.barnesandnoble.com/w/mastering-bitcoin-andreas-m-antonopoulos/1126323222?ean=9781098150051)
-
-The tag [third_edition_print_1](https://github.com/bitcoinbook/bitcoinbook/releases/tag/third_edition_print1) corresponds to the first print of the third edition of Mastering Bitcoin as published in paperback and ebook by O'Reilly Media in December 2023.
 
  <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Mastering Bitcoin: Programming the Open Blockchain (Third Edition)</span> by <span property="cc:attributionName">Andreas M. Antonopoulos, David A. Harding</span> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg"></a></p> 
 
