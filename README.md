@@ -23,12 +23,12 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>start</title>
+  <title>AUDIO/VIDEO AUTOPLAY</title>
 </head>
 <body>
-  <h1>mari coba</h1>
+  <h1>AUDIO/VIDEO AUTOPLAY</h1>
   <audio controls>
-         <source src="start.mp3" type="audio/mp3">
+    <source src="start.mp3"type=audio/mpeg>
   </audio>
 </body>
 </html>
