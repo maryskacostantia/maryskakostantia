@@ -5,30 +5,13 @@ Selamat Datang Di Perpustakaan Maryska Kostantia!
 Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya. Berikut ini adalah gambar dari gedung Perpustakaan Universitas Indonesia.
 
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
-       <img src="images.jpeg"widht="678"height="452>
-
-
-
-
-
-
-
-
-
-
+       <img src="images.jpeg"/>
+       <img src="images.jpeg" alt=perpustakaan umy"/>
+       <img src="images.jpeg"widht=678"height="452"/>
+       <img  src = "images.jpeg" alt="perpustakaan umy" widht="678" height="452"/>
 
               
 ## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
-
-**The current edition is not available as a PDF, deliberately**. Why? Because the publisher (O'Reilly Media) is a for-profit publisher who puts considerable resources behind producing, editing and distributing this book. The third edition of "Mastering Bitcoin" is available under a CC-BY-NC-ND license, not a CC-BY-SA license. The book will eventually (within a year of publication) be released under a CC-BY-SA license, at which point PDF copies and translations will be allowed (a PDF is a "derivative" product, which is what the "ND-NoDerivatives" part of the license prohibits). 
-
-Making PDF copies violates the license and interferes with the publisher's and the authors' ability to earn from their work. Furthermore, if you make it so the publisher can't recoup their investment, they may delay the release into CC-BY-SA. A beautifully rendered PDF or epub version of this book is offered for sale by the publisher. Convenient packaging is the for-profit product, whereas the version available here is slightly less convenient but entirely free for personal and non-commercial use. If you want convenience and nice packaging, buy the book!
-
-Please don't create or distribute PDFs until the license is changed to CC-BY-SA. It is rare for a publisher to even agree to a CC-BY-NC-ND license. Don't make it harder for free culture by violating even that, already generous, license. 
-
-# Mastering Bitcoin Third Edition
-
-*"Mastering Bitcoin: Programming the Open Blockchain (3rd Edition)"* is now available in paperback and ebook formats by many booksellers worldwide, such as:
 
 * [EBooks.com](https://www.ebooks.com/en-us/book/211147266/mastering-bitcoin/andreas-m-antonopoulos/)
 * [Amazon](https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain/dp/1098150090)
