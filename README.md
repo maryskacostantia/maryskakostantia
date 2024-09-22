@@ -1,8 +1,8 @@
-# Mastering Bitcoin
+# Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
-Mastering Bitcoin is a technical book that explains what Bitcoin is and how it works.
+Selamat Datang Di Perpustakaan Maryska Kostantia!
+Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya. Berikut ini adalah gambar dari gedung Perpustakaan Universitas Indonesia.
 
-This repository contains the complete text of three editions of the book Mastering Bitcoin as published in paperback and ebook formats by O'Reilly Media. Different editions of this book are covered by different open licenses (see [LICENSE](LICENSE)). The three editions are:
 
 * The [first edition, second print](https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print2), published in December 2014
 * The [second edition, third print](https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print3), published in March 2018
