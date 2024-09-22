@@ -5,12 +5,8 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY):</p>
        <img src="https://images.app.goo.gl/LVoE6S5cGq6r95gY8" />
-    
-* The [first edition, second print](https://github.com/bitcoinbook/bitcoinbook/releases/tag/Edition1Print2), published in December 2014
-* The [second edition, third print](https://github.com/bitcoinbook/bitcoinbook/releases/tag/second_edition_print3), published in March 2018
-* The [third edition, first print](https://github.com/bitcoinbook/bitcoinbook/releases/tag/third_edition_print1), published in December 2023
-
-# Reading This Book
+       <img src="images.jpeg"widht="104"height="142>
+# Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
 To read this book *for free*, see [BOOK.md](https://github.com/bitcoinbook/bitcoinbook/blob/develop/BOOK.md). Click on each of the chapters to read in your browser. 
 
