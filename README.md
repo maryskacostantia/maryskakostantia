@@ -5,7 +5,7 @@ Selamat Datang Di Perpustakaan Maryska Kostantia!
 Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya. Berikut ini adalah gambar dari gedung Perpustakaan Universitas Indonesia.
 
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
-       <img src="images.jpeg"widht="104"height="142>
+       <img src="images.jpeg"widht="678"height="452>
 
 
 
