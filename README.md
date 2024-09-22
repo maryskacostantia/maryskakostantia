@@ -8,13 +8,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <p>Berikut Gambar Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
        <img src="images.jpeg"/>
 
-
-<!DOCTYPE html>
-<html>
-<body>
+<p>
        <audio controls>
        <source src="start up.ogg"type="audio/ogg">
        <source src="start up.m4a"type="audio/ffmpeg">
- </audio>
- </body>
- </html>
