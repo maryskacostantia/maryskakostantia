@@ -11,26 +11,25 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AUDIO/VIDEO AUTOPLAY</title>
+  <title>VIDEO AUTOPLAY</title>
 </head>
 <body>
   <h1>AUDIO/VIDEO AUTOPLAY</h1>
   <video widht="320" height="240" controls>
     <source src="Profile Perpustakaan UMY.mp4"type="video/mp4>
-           </video>
-  </audio>
+  </video>
 </body>
 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AUDIO/VIDEO AUTOPLAY</title>
+  <title>AUDIO AUTOPLAY</title>
 </head>
 <body>
   <h1>AUDIO/VIDEO AUTOPLAY</h1>
   <audio controls>
     <source src="start.mp3"type=audio/mpeg>
-   </audio>
+  </audio>
 </body>
 </html>
 
