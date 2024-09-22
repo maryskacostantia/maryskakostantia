@@ -22,7 +22,16 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
   </iframe>
 </body>
 
+<audio controls>
+<source src="start up.ogg"type="audio/ogg">
+<source src="start up.m4a"type="audio/ffmpeg">
+ </audio>
+ </body>
+ </html>
+ 
 
+
+ffmpeg -i input_audio.wav -c:a aac -b:a 128k output_audio.m4a
 
 
 ## Mastering Bitcoin - Second Edition
