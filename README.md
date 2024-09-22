@@ -10,14 +10,17 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
               
 ## Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
 
-<!DOCTYPE html>
-<html>
-<body>
-
-<video widht="320" height="240" controls>
-<source src="Profile Perpustakaan UMY.mp4" type="video/ogg">
-<source src="movie. ogg"type="video/ogg">
-</video>
+<h1>Video Profil Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</h1>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://youtu.be/UnKv-MU1vUk" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</body>
 
 * [video profil perpustakaan umy](https://youtu.be/UnKv-MU1vUk)
 * [Amazon](https://library.umy.ac.id/)
