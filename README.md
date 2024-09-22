@@ -13,8 +13,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <!DOCTYPE html>
 <html>
 <body>
-       
-<source src="Profile Perpustakaan UMY.mp4" type="video/ogg">
+       <source src="Profile Perpustakaan UMY.mp4" type="video/ogg">
 </video>
 
 * [video profil perpustakaan umy](https://youtu.be/UnKv-MU1vUk)
