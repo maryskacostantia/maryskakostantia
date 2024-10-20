@@ -9,9 +9,7 @@
     <!-- Link ke file stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="container">
-
 <!-- Header Section -->
 <header id="header">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -29,8 +27,9 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu Utama</a>                    
                     <!-- Submenu Items -->
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Buku Baru</a></li>
-                        <li><a class="dropdown-item" href="#">Kategori Buku</a></li>
+                        <li><a class="dropdown-item" href="#">kolom 1</a></li>
+                        <li><a class="dropdown-item" href="#">kolom 2</a></li>
+                        <li><a class="dropdown-item" href="#">kolom 3</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Tentang Kami</a></li>
                     </ul>
@@ -57,15 +56,6 @@
                  </ div >    
                </article>
 
-
-               <!-- Konten Lainnya-->
-               <article class ='card'>
-                   <img src ='https://via.placeholder.com/150x200'alt ='Gambar Buku'/>
-                   <divclass ='cardbody'>
-                       <h5class ='cardtitle'>Judul Bukuterbaru!</h5>
-                       <pcardtext>Deskripsi singkat mengenai bukunya.</pcardtext>
-                     </div>
-                   </article>
 
 Selamat Datang Di Perpustakaan Maryska Kostantia!
 Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya, karena saya baru belajar tentang cara membuat website perpustakaan Universitas Muhammadiyah Yogyakarta (UMY) * [website perpustakaan Universitas Muhammadiyah Yogyakarta (UMY). 
