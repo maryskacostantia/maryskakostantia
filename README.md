@@ -260,14 +260,11 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu Utama</a>
-                    
                     <!-- Submenu Items -->
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Buku Baru</a></li>
@@ -276,49 +273,33 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
                         <li><a class="dropdown-item" href="#">Tentang Kami</a></li>
                     </ul>
                 </li>
-                
             </ul>
-        
        </div >
      </ nav >
-
    </ header >
-
    <!-- Main Content Area -->
-
+   
    < main id = "mainContent" style ="display:flex;flex-wrap : wrap ;justify-content:center;" >
-
       <!-- Kolom I -->
       < div class = "col-md-4 text-center mt-5" > 
           < h2 > Selamat Datang Di Website Perpustakaan !< /h2 > 
            < p > Silahkan cari buku favoritmu disini.< /p > 
-
          </ div >
-
       <!-- Kolom II --> 
       < div class = " col-md -6 text-left ml - auto mr -auto mt -5 ">  
-
          <!-- Konten Kolom II-->   
-
          < article class ='card ' style='margin-bottom :10px;'>    
              < img src ='https://via.placeholder.com/150x200' alt ='Gambar Buku'/>     
               < div class =' card-body '>       
                   < h5 class ='card-title'> Judul Buku Terbaru!< /h5 >      
                    < p class ='card-text'> Deskripsi singkat tentang judul bukunya .< /p >      
-
                  </ div >    
-
                </article>
-
-
                <!-- Konten Lainnya-->
-
                <article class ='card'>
                    <img src ='https://via.placeholder.com/150x200'alt ='Gambar Buku'/>
                    <divclass ='cardbody'>
                        <h5class ='cardtitle'>Judul Bukuterbaru!</h5>
                        <pcardtext>Deskripsisingkatmengenaitudubukunya.</pcardtext>
-
                      </div>
-
                    </article>
