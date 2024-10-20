@@ -28,6 +28,17 @@
                     <!-- Submenu Items -->
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">kolom 1</a></li>
+                    </ul>
+                </li>                
+            </ul>        
+       </div >
+     </ nav >
+   </ header >
+   <!-- Main Content Area -->
+   < main id = "mainContent" style ="display:flex;flex-wrap : wrap ;justify-content:center;" >
+      <!-- Kolom I -->
+      < div class = "col-md-4 text-center mt-5" > 
+          < h2 > Selamat Datang Di Website Perpustakaan !< /h2 > 
                         <li><a class="dropdown-item" href="#">kolom 2</a></li>
                         <li><a class="dropdown-item" href="#">kolom 3</a></li>
                         <li><hr class="dropdown-divider"></li>
