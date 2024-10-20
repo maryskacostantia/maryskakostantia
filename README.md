@@ -1,4 +1,31 @@
 # Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
+ 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.html">
+    <title>Website perpustakaan</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li>
+                <a href="#">Layanan</a>
+                <ul class="dropdown">
+                    <li><a href="#">Layanan 1</a></li>
+                    <li><a href="#">Layanan 2</a></li>
+                    <li><a href="#">Layanan 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 
 Selamat Datang Di Perpustakaan Maryska Kostantia!
 Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpustakaan Mata kuliah Pemrograman Web. Ini adalah perpustakaan homepage pertama saya, karena saya baru belajar tentang cara membuat website perpustakaan Universitas Muhammadiyah Yogyakarta (UMY) * [website perpustakaan Universitas Muhammadiyah Yogyakarta (UMY). 
