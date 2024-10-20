@@ -240,66 +240,6 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu dengan Dropdown</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #333;
-            position: relative;
-            z-index: 999;
-        }
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar li {
-            display: inline-block;
-            position: relative;
-        }
-        .navbar li a {
-            color: white;
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-        .navbar ul ul {
-            position: absolute;
-            top: 100%;
-            display: none;
-            background-color: #333;
-            min-width: 160px; /* Lebar minimum untuk dropdown */
-        }
-        .navbar ul ul li {
-            display: block;
-        }
-        .navbar li:hover > ul {
-            display: block; /* Menampilkan dropdown saat hover */
-        }
-        .navbar ul ul li a:hover {
-            background-color: #555; /* Warna latar saat hover di submenu */
-        }
-    </style>
-</head>
-<body>
-    <div id="halaman">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li>
-                    <a href="#">Dropdown</a>
-                    <ul>
-                        <li><a href="#">Submenu-1</a></li>
-                        <li><a
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Perpustakaan</title>
@@ -319,14 +259,11 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu Utama</a>
-                    
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu Utama</a>    
                     <!-- Submenu Items -->
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Buku Baru</a></li>
@@ -335,49 +272,34 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
                         <li><a class="dropdown-item" href="#">Tentang Kami</a></li>
                     </ul>
                 </li>
-                
             </ul>
-        
        </div >
      </ nav >
 
    </ header >
-
+   
    <!-- Main Content Area -->
-
    < main id = "mainContent" style ="display:flex;flex-wrap : wrap ;justify-content:center;" >
-
       <!-- Kolom I -->
       < div class = "col-md-4 text-center mt-5" > 
           < h2 > Selamat Datang Di Website Perpustakaan !< /h2 > 
            < p > Silahkan cari buku favoritmu disini.< /p > 
-
          </ div >
-
       <!-- Kolom II --> 
       < div class = " col-md -6 text-left ml - auto mr -auto mt -5 ">  
-
          <!-- Konten Kolom II-->   
-
          < article class ='card ' style='margin-bottom :10px;'>    
              < img src ='https://via.placeholder.com/150x200' alt ='Gambar Buku'/>     
               < div class =' card-body '>       
                   < h5 class ='card-title'> Judul Buku Terbaru!< /h5 >      
                    < p class ='card-text'> Deskripsi singkat tentang judul bukunya .< /p >      
-
                  </ div >    
-
                </article>
-
-
                <!-- Konten Lainnya-->
-               
                <article class ='card'>
                    <img src ='https://via.placeholder.com/150x200'alt ='Gambar Buku'/>
                    <divclass ='cardbody'>
                        <h5class ='cardtitle'>Judul Bukuterbaru!</h5>
                        <pcardtext>Deskripsisingkatmengenaitudubukunya.</pcardtext>
-
                      </div>
-
                    </article>
