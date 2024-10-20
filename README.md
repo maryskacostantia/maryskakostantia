@@ -238,7 +238,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
         <p>CSS adalah bahasa stylesheet yang digunakan untuk mengontrol tata letak dan tampilan halaman web. Dengan CSS, Anda dapat mengatur warna, ukuran, spasi, jenis font, dan banyak properti tata letak lainnya untuk elemen-elemen HTML. Penggunaan CSS memungkinkan pemisahan antara struktur dan tata letak, sehingga HTML dapat fokus pada struktur konten, sementara CSS mengontrol cara konten tersebut ditampilkan.</p> 
 </html>
 
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -264,72 +264,3 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
     </nav>
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu dengan Dropdown</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            background-color: #333;
-            position: relative;
-            z-index: 999;
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar li {
-            display: inline-block;
-            position: relative;
-        }
-
-        .navbar li a {
-            color: white;
-            display: block;
-            padding: 10px 20px;
-            text-decoration: none;
-        }
-
-        .navbar ul ul {
-            position: absolute;
-            top: 100%;
-            display: none;
-            background-color: #333;
-            min-width: 160px; /* Lebar minimum untuk dropdown */
-        }
-
-        .navbar ul ul li {
-            display: block;
-        }
-
-        .navbar li:hover > ul {
-            display: block; /* Menampilkan dropdown saat hover */
-        }
-
-        .navbar ul ul li a:hover {
-            background-color: #555; /* Warna latar saat hover di submenu */
-        }
-    </style>
-</head>
-
-<body>
-    <div id="halaman">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li>
-                    <a href="#">Dropdown</a>
-                    <ul>
-                        <li><a href="#">Submenu-1</a></li>
-                        <li><a
