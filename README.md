@@ -244,7 +244,7 @@ Perkenalkan nama saya Maryska Kostantia, Nim 222201013 Program Studi D3 Perpusta
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Menu dengan Dropdown</title>
+    <title>Website Perpustakaan </title>
 </head>
 <body>
     <nav class="navbar">
