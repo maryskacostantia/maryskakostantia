@@ -16,9 +16,9 @@
             <li>
                 <a href="#">Layanan</a>
                 <ul class="dropdown">
-                    <li><a href="#">Layanan 1</a></li>
-                    <li><a href="#">Layanan 2</a></li>
-                    <li><a href="#">Layanan 3</a></li>
+                    <li><a href="#">Kolom 1</a></li>
+                    <li><a href="#">Kolom 2</a></li>
+                    <li><a href="#">Kolom 3</a></li>
                 </ul>
             </li>
             <li><a href="#">Kontak</a></li>
