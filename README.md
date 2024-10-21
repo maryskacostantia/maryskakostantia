@@ -295,7 +295,7 @@
     <title>Perpustakaan</title>
 </head>
 <body>
-    <h2 style="color: blue; font-family: sans;">Judul Buku</h2>
+    <h2 style="color: blue; font-family: sans;">u</h2>
     <p style="color: green;">.</p>
 </body>
 </html>
@@ -314,8 +314,7 @@
     </style>
 </head>
 <body>
-    <h2>Judul Buku</h2>
-    <p>.</p>
+    <h2>/h2>
 </body>
 </html>
 
@@ -325,7 +324,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h2>Judul Buku</h2>
-    <p>.</p>
+    <h2>J</h2>
 </body>
 </html>
