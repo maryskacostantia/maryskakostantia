@@ -87,8 +87,8 @@
 </div>
 
 <header>
-    <h1>Selamat Datang Di Perpustakaan Maryska Kostantia!Perkenalkan nama saya Maryska Kostantia, dengan nim 222201013 Program Studi D3 Perpustakaan, mata kuliah pemrograman web. Ini adalah perpustakaan homepage pertama saya, karena baru belajar tentang cara membuat website Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</h1>
-    <p>Perkenalkan, nama saya Maryska Kostantia, NIM 222201013, Program Studi D3 Perpustakaan. Ini adalah homepage perpustakaan pertama saya.</p>
+    <h1>Selamat Datang Di Perpustakaan Maryska Kostantia!</h1>
+    <p>Perkenalkan nama saya Maryska Kostantia, dengan nim 222201013 Program Studi D3 Perpustakaan, mata kuliah pemrograman web. Ini adalah perpustakaan homepage pertama saya, karena baru belajar tentang cara membuat website Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY).</p>
     <p><a href="https://library.umy.ac.id/">Website Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)</a></p>
 </header>
 
