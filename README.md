@@ -1,5 +1,4 @@
 # Perpustakaan Universitas Muhammadiyah Yogyakarta (UMY)
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
