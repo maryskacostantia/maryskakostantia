@@ -81,7 +81,7 @@
         <div class="dropdown-content">
             <a href="halaman selamt datang.html">Link 1</a>
             <a href="tabel bahan .html">Link 2</a>
-            <a href="d">Link 3</a>
+            <a href="table table-bordered.html">Link 3</a>
         </div>
     </div>
 </div>
