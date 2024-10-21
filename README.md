@@ -289,15 +289,14 @@
 </body>
 </html>
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Perpustakaan</title>
 </head>
 <body>
-    <h2 style="color:blue; font-family:sans;">Judul Buku</h2>
-    <p style="color:green;">Deskripsi buku ini sangat menarik.</p>
+    <h2 style="color: blue; font-family: sans;">Judul Buku</h2>
+    <p style="color: green;">.</p>
 </body>
 </html>
 
@@ -316,7 +315,7 @@
 </head>
 <body>
     <h2>Judul Buku</h2>
-    <p>Deskripsi buku ini sangat menarik.</p>
+    <p>.</p>
 </body>
 </html>
 
@@ -327,6 +326,6 @@
 </head>
 <body>
     <h2>Judul Buku</h2>
-    <p>Deskripsi buku ini sangat menarik.</p>
+    <p>.</p>
 </body>
 </html>
