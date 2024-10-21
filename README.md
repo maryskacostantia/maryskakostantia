@@ -93,12 +93,12 @@
 </header>
 
 <main>
-    <section>
-        <h2>Profil Perpustakaan UMY</h2>
-        <img src="images.jpeg" alt="Perpustakaan Universitas Muhammadiyah Yogyakarta" />
-        <h3>Video Profil</h3>
-        <iframe width="560" height="315" src="https://youtu.be/UnKv-MU1vUk?si=hcKps_V0Ww3kn5LI" allowfullscreen></iframe>
-    </section>
+ <section>
+    <h2>Profil Perpustakaan UMY</h2>
+    <img src="images.jpeg" alt="Perpustakaan Universitas Muhammadiyah Yogyakarta" />
+    <h3>Video Profil</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UnKv-MU1vUk?si=hcKps_V0Ww3kn5LI" allowfullscreen title="Video Profil Perpustakaan UMY"></iframe>
+</section>
 
     <section>
         <h2>AUDIO</h2>
