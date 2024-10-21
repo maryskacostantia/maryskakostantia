@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perpustakaan</title>
+    <style type="text/css">
+        h2 {
+            color: blue;
+            font-family: sans;
+        }
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Judul Buku</h2>
+    <p>Deskripsi buku ini sangat menarik.</p>
+</body>
+</html>
