@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pemesanan Buku</title>
+    <style>
+        section {
+            margin: 20px;
+        }
+
+        form {
+            background-color: #f9f9f9; /* Warna latar belakang formulir */
+            border: 1px solid #ccc;    /* Border */
+            padding: 20px;             /* Jarak di dalam formulir */
+            border-radius: 8px;        /* Sudut membulat */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+        }
+
+        table {
+            width: 100%;               /* Lebar tabel 100% */
+            border-collapse: collapse; /* Menghilangkan jarak antar border */
+        }
+
+        th {
+            text-align: left;          /* Teks rata kiri untuk header */
+            padding: 10px 5px;        /* Jarak dalam header */
+        }
+
+        td {
+            padding: 10px 5px;        /* Jarak dalam sel */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 100%;              /* Lebar input 100% */
+            padding: 10px;            /* Jarak dalam input */
+            border: 1px solid #ccc;   /* Border untuk input */
+            border-radius: 4px;       /* Sudut membulat */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Warna latar belakang tombol */
+            color: white;               /* Warna teks tombol */
+            padding: 10px 15px;        /* Jarak dalam tombol */
+            border: none;              /* Tanpa border */
+            border-radius: 4px;       /* Sudut membulat tombol */
+            cursor: pointer;           /* Kursor pointer saat hover */
+            margin-top: 10px;          /* Jarak atas untuk tombol */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <h2>Formulir Pemesanan Buku</h2>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th>Nama</th>
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <th>Nomor Anggota Perpustakaan</th>
+                <td><input type="text" name="nomor_anggota" required></td>
+            </tr>
+            <tr>
+                <th>Tanggal Pemesanan</th>
+                <td><input type="date" name="tanggal_pemesanan" required></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <th>No HP</th>
+                <td><input type="text" name="no_hp" required></td>
+            </tr>
+            <tr>
+                <th>Penulis Buku</th>
+                <td><input type="text" name="penulis_buku" required></td>
+            </tr>
+            <tr>
+                <th>No ISBN</th>
+                <td><input type="text" name="no_isbn" required></td>
+            </tr>
+            <tr>
+                <th>Judul Buku Yang Dipesan</th>
+                <td><input type="text" name="judul_buku" required></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+</body>
+</html>
