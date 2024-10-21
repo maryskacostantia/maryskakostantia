@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perpustakaan</title>
+</head>
+<body>
+    <h2 style="color:blue; font-family:sans;">Judul Buku</h2>
+    <p style="color:green;">Deskripsi buku ini sangat menarik.</p>
+</body>
+</html>
+
+<html>
+<head>
+    <title>Perpustakaan</title>
+    <style type="text/css">
+        h2 {
+            color: blue;
+            font-family: sans;
+        }
+        p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Judul Buku</h2>
+    <p>Deskripsi buku ini sangat menarik.</p>
+</body>
+</html>
+
+<html>
+<head>
+    <title>Perpustakaan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Judul Buku</h2>
+    <p>Deskripsi buku ini sangat menarik.</p>
+</body>
+</html>
