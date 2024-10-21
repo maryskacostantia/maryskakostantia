@@ -288,8 +288,6 @@
 
 </body>
 </html>
-
-<!DOCTYPE html>
 <html>
 <head>
     <title>Perpustakaan</title>
@@ -312,11 +310,6 @@
             color: green;
         }
     </style>
-</head>
-<body>
-    <h2>/h2>
-</body>
-</html>
 
 <html>
 <head>
@@ -324,6 +317,3 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h2>J</h2>
-</body>
-</html>
