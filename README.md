@@ -309,7 +309,6 @@
         }
     </style>
 
-
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -318,11 +317,9 @@
         body {
             font-family: Arial, sans-serif;
         }
-        
         .buku {
             margin-bottom: 10px;
         }
-
         document.getElementById("Data Buku").innerHTML {
             width: 50%;
             padding: 20px;
@@ -342,3 +339,4 @@
 
 </body>
 </html>
+
