@@ -328,7 +328,6 @@
         }
      </style>
 
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -402,6 +401,54 @@
             // Tambahkan hasil looping ke elemen DOM #data-buku 
             document.querySelector('#data-buku').insertAdjacentHTML('beforeend', outputHtml);  
         }
+
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pameran Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #pameranOutput {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pameran Buku Perpustakaan</h1>
+    <button id="pameranButton">Lihat Pameran Buku</button>
+    <div id="pameranOutput"></div>
+    <script>
+        document.getElementById("pameranButton").addEventListener("click", function() {
+            const pameranBuku = [
+                "Belajar JavaScript",
+                "Panduan CSS",
+                "Fundamentals of HTML",
+                "Mastering React"
+            ];
+            let output = "<h2>Daftar Buku di Pameran:</h2><ul>";
+            for (let i = 0; i < pameranBuku.length; i++) {
+                output += "<li>" + pameranBuku[i] + "</li>";
+            }
+            output += "</ul>";
+            document.getElementById("pameranOutput").innerHTML = output;
+        });
+    </script>
+</body>
+</html>
+
         tampilData();
     </script>
 </body>
