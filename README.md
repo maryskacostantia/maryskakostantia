@@ -311,6 +311,7 @@
 
 <html>
 <head>
+    document.getElementById("output").innerHTML = "Data Buku: JavaScript Basics";
     <title>Perpustakaan</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
