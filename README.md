@@ -328,6 +328,36 @@
         }
      </style>
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Buku Perpustakaan</h1>
+    <div id="output"></div>
+    <script>
+        // Menampilkan data buku menggunakan innerHTML
+        const buku = "Data Buku: JavaScript Basics";
+        document.getElementById("output").innerHTML = buku;
+    </script>
+</body>
+</html>
+
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -351,33 +381,27 @@
 <body>
     <h1>Daftar Buku Perpustakaan</h1>
     <div id="data-buku"></div>
-
     <script>
         // Data buku sebagai contoh
         const bukus = [
             { judul: 'Buku Pertama', penulis: 'Penulis A' },
             { judul: 'Buku Kedua', penulis: 'Penulis B' },
         ];
-
         function tampilData() {
-            let outputHtml = '';
-            
+            let outputHtml = '';     
             // Looping melalui array bukus
             for (let i = 0; i < bukus.length; i++) {
-                const buku = bukus[i];
-                
+                const buku = bukus[i];             
                 outputHtml += `
                     <article class='buku'>
                         <h2>${buku.judul}</h2>
                         <span>Penulis:</span><br/>
                         ${buku.penulis}
                     </article>`;
-            }  
-            
+            }            
             // Tambahkan hasil looping ke elemen DOM #data-buku 
             document.querySelector('#data-buku').insertAdjacentHTML('beforeend', outputHtml);  
         }
-
         tampilData();
     </script>
 </body>
