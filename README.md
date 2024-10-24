@@ -330,7 +330,6 @@
 <body>
     <h1>Data Buku Perpustakaan</h1>
     <div id="output"></div>
-
     <script>
         // Menampilkan data buku menggunakan innerHTML
         const buku = "Data Buku: JavaScript Basics";
