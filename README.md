@@ -323,7 +323,7 @@
             margin-bottom: 10px;
         }
 
-        #data-buku {
+        document.getElementById("Data Buku").innerHTML {
             width: 50%;
             padding: 20px;
             border-radius: 5px;
