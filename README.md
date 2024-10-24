@@ -309,10 +309,31 @@
         }
     </style>
 
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    document.getElementById("output").innerHTML = "Data Buku: JavaScript Basics";
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
+    <h1>Data Buku Perpustakaan</h1>
+    <div id="output"></div>
+    <script>
+        // Menampilkan data buku menggunakan innerHTML
+        const buku = "Data Buku: JavaScript Basics";
+        document.getElementById("output").innerHTML = buku;
+    </script>
+</body>
+</html>
