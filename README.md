@@ -292,7 +292,7 @@
 </head>
 <body>
     <h2 style="color: blue; font-family: sans;"></h2>
-    <p style="color: green;">.</p>
+    <p style="color: green;"></p>
 </body>
 </html>
 
