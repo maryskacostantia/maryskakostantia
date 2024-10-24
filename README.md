@@ -327,16 +327,58 @@
             box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 12px;
         }
      </style>
-     
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #data-buku {
+            margin-top: 20px;
+        }
+        .buku {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
+    <h1>Daftar Buku Perpustakaan</h1>
+    <div id="data-buku"></div>
 
-<h1>Daftar Buku</h1>
+    <script>
+        // Data buku sebagai contoh
+        const bukus = [
+            { judul: 'Buku Pertama', penulis: 'Penulis A' },
+            { judul: 'Buku Kedua', penulis: 'Penulis B' },
+        ];
 
-<div id='data-buku'></div>
+        function tampilData() {
+            let outputHtml = '';
+            
+            // Looping melalui array bukus
+            for (let i = 0; i < bukus.length; i++) {
+                const buku = bukus[i];
+                
+                outputHtml += `
+                    <article class='buku'>
+                        <h2>${buku.judul}</h2>
+                        <span>Penulis:</span><br/>
+                        ${buku.penulis}
+                    </article>`;
+            }  
+            
+            // Tambahkan hasil looping ke elemen DOM #data-buku 
+            document.querySelector('#data-buku').insertAdjacentHTML('beforeend', outputHtml);  
+        }
 
-<script src='./script.js'></script>
-
+        tampilData();
+    </script>
 </body>
 </html>
-
