@@ -309,7 +309,6 @@
         }
     </style>
 
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -333,6 +332,7 @@
     <label for="search">Cari Buku:</label>
     <input type="text" id="search" placeholder="Masukkan judul buku">
     <button onclick="searchBook()">Cari</button>
+
     <h2>Daftar Buku:</h2>
     <ul id="book-list">
         <li>JavaScript Dasar</li>
@@ -341,57 +341,39 @@
         <li>Node.js untuk Pemula</li>
         <li>Framework React</li>
     </ul>
+
     <div id="result"></div>
-    <div id="stats"></div>
+
     <script>
-        // Daftar buku dalam variabel array
+        // Daftar buku dalam variabel
         var books = [
-            { title: "JavaScript Dasar", category: "Pemrograman" },
-            { title: "Belajar HTML dan CSS", category: "Web Development" },
-            { title: "Pemrograman Python", category: "Pemrograman" },
-            { title: "Node.js untuk Pemula", category: "Web Development" },
-            { title: "Framework React", category: "Web Development" }
+            "JavaScript Dasar",
+            "Belajar HTML dan CSS",
+            "Pemrograman Python",
+            "Node.js untuk Pemula",
+            "Framework React"
         ];
+
         // Fungsi untuk mencari buku
         function searchBook() {
-            var searchTerm = document.getElementById("search").value.toLowerCase(); // Mendapatkan input pencarian
+            // Mendapatkan input dari pengguna
+            var searchTerm = document.getElementById("search").value;
             var resultDiv = document.getElementById("result");
-            var statsDiv = document.getElementById("stats");
-            resultDiv.innerHTML = ""; // Kosongkan hasil pencarian sebelumnya
-            var foundBooks = []; // Array untuk menyimpan buku yang ditemukan
-            var totalBooks = 0; // Variabel untuk menghitung total buku yang ditemukan
-            // Menggunakan perulangan untuk memeriksa setiap buku dalam daftar
+            resultDiv.innerHTML = ""; // Kosongkan hasil sebelumnya
+
+            // Menggunakan perulangan untuk memeriksa setiap buku
+            var found = false; // Variabel untuk menandai apakah buku ditemukan
             for (var i = 0; i < books.length; i++) {
-                // Jika judul buku mengandung kata kunci pencarian
-                if (books[i].title.toLowerCase().includes(searchTerm)) {
-                    resultDiv.innerHTML += "<p>Buku ditemukan: " + books[i].title + " (Kategori: " + books[i].category + ")</p>";
-                    foundBooks.push(books[i].title); // Menambahkan buku yang ditemukan ke array foundBooks
-                    totalBooks++; // Menambah jumlah buku yang ditemukan
+                // Menggunakan kondisi untuk memeriksa kecocokan
+                if (books[i].toLowerCase().includes(searchTerm.toLowerCase())) {
+                    resultDiv.innerHTML += "<p>Buku ditemukan: " + books[i] + "</p>";
+                    found = true; // Menandai bahwa buku ditemukan
                 }
             }
-            // Struktur kondisi untuk menampilkan pesan jika tidak ada buku yang ditemukan
-            if (totalBooks === 0) {
+
+            // Jika tidak ada buku yang ditemukan
+            if (!found) {
                 resultDiv.innerHTML = "<p>Tidak ada buku yang ditemukan.</p>";
-            } else {
-                // Menampilkan statistik jumlah buku yang ditemukan
-                statsDiv.innerHTML = "<p>Total Buku Ditemukan: " + totalBooks + "</p>";
-              // Menampilkan kategori buku yang ditemukan
-                var categories = {};
-                for (var i = 0; i < foundBooks.length; i++) {
-                    var bookCategory = books.find(book => book.title === foundBooks[i]).category;
-                    // Menghitung jumlah kategori yang ditemukan
-                    if (categories[bookCategory]) {
-                        categories[bookCategory]++;
-                    } else {
-                        categories[bookCategory] = 1;
-                    }
-                }
-                // Menampilkan kategori buku yang ditemukan
-                var categoryStats = "<h3>Statistik Kategori:</h3>";
-                for (var category in categories) {
-                    categoryStats += "<p>" + category + ": " + categories[category] + " buku ditemukan.</p>";
-                }
-                statsDiv.innerHTML += categoryStats;
             }
         }
     </script>
