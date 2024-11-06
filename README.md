@@ -309,6 +309,7 @@
         }
     </style>
 
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -322,6 +323,9 @@
         input, button {
             margin: 5px 0;
         }
+        #result {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -329,7 +333,6 @@
     <label for="search">Cari Buku:</label>
     <input type="text" id="search" placeholder="Masukkan judul buku">
     <button onclick="searchBook()">Cari</button>
-
     <h2>Daftar Buku:</h2>
     <ul id="book-list">
         <li>JavaScript Dasar</li>
@@ -338,95 +341,59 @@
         <li>Node.js untuk Pemula</li>
         <li>Framework React</li>
     </ul>
-
     <div id="result"></div>
-
+    <div id="stats"></div>
     <script>
-        // Daftar buku dalam variabel
+        // Daftar buku dalam variabel array
         var books = [
-            "JavaScript Dasar",
-            "Belajar HTML dan CSS",
-            "Pemrograman Python",
-            "Node.js untuk Pemula",
-            "Framework React"
+            { title: "JavaScript Dasar", category: "Pemrograman" },
+            { title: "Belajar HTML dan CSS", category: "Web Development" },
+            { title: "Pemrograman Python", category: "Pemrograman" },
+            { title: "Node.js untuk Pemula", category: "Web Development" },
+            { title: "Framework React", category: "Web Development" }
         ];
-
         // Fungsi untuk mencari buku
         function searchBook() {
-            // Mendapatkan input dari pengguna
-            var searchTerm = document.getElementById("search").value;
+            var searchTerm = document.getElementById("search").value.toLowerCase(); // Mendapatkan input pencarian
             var resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = ""; // Kosongkan hasil sebelumnya
-
-            // Menggunakan perulangan untuk memeriksa setiap buku
-            var found = false; // Variabel untuk menandai apakah buku ditemukan
+            var statsDiv = document.getElementById("stats");
+            resultDiv.innerHTML = ""; // Kosongkan hasil pencarian sebelumnya
+            var foundBooks = []; // Array untuk menyimpan buku yang ditemukan
+            var totalBooks = 0; // Variabel untuk menghitung total buku yang ditemukan
+            // Menggunakan perulangan untuk memeriksa setiap buku dalam daftar
             for (var i = 0; i < books.length; i++) {
-                // Menggunakan kondisi untuk memeriksa kecocokan
-                if (books[i].toLowerCase().includes(searchTerm.toLowerCase())) {
-                    resultDiv.innerHTML += "<p>Buku ditemukan: " + books[i] + "</p>";
-                    found = true; // Menandai bahwa buku ditemukan
+                // Jika judul buku mengandung kata kunci pencarian
+                if (books[i].title.toLowerCase().includes(searchTerm)) {
+                    resultDiv.innerHTML += "<p>Buku ditemukan: " + books[i].title + " (Kategori: " + books[i].category + ")</p>";
+                    foundBooks.push(books[i].title); // Menambahkan buku yang ditemukan ke array foundBooks
+                    totalBooks++; // Menambah jumlah buku yang ditemukan
                 }
             }
-
-            // Jika tidak ada buku yang ditemukan
-            if (!found) {
+            // Struktur kondisi untuk menampilkan pesan jika tidak ada buku yang ditemukan
+            if (totalBooks === 0) {
                 resultDiv.innerHTML = "<p>Tidak ada buku yang ditemukan.</p>";
-            }
-        }
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pameran Buku</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        #info {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            display: none; /* Awalnya disembunyikan */
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Selamat Datang di Pameran Buku!</h1>
-    <button id="showInfoButton">Lihat Info Pameran</button>
-    
-    <div id="info">
-        <h2>Detail Pameran Buku</h2>
-        <p>Pameran Buku akan diadakan pada tanggal 10-12 November 2024 di Gedung Serbaguna.</p>
-        <p>Jangan lewatkan kesempatan untuk menemukan buku-buku terbaru dan mengikuti berbagai acara menarik!</p>
-    </div>
-
-    <script>
-        // Mengambil elemen tombol dan div info
-        const button = document.getElementById('showInfoButton');
-        const infoDiv = document.getElementById('info');
-
-        // Menambahkan event listener untuk tombol
-        button.addEventListener('click', function() {
-            // Menampilkan atau menyembunyikan div info
-            if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
-                infoDiv.style.display = 'block'; // Tampilkan
             } else {
-                infoDiv.style.display = 'none'; // Sembunyikan
+                // Menampilkan statistik jumlah buku yang ditemukan
+                statsDiv.innerHTML = "<p>Total Buku Ditemukan: " + totalBooks + "</p>";
+              // Menampilkan kategori buku yang ditemukan
+                var categories = {};
+                for (var i = 0; i < foundBooks.length; i++) {
+                    var bookCategory = books.find(book => book.title === foundBooks[i]).category;
+                    // Menghitung jumlah kategori yang ditemukan
+                    if (categories[bookCategory]) {
+                        categories[bookCategory]++;
+                    } else {
+                        categories[bookCategory] = 1;
+                    }
+                }
+                // Menampilkan kategori buku yang ditemukan
+                var categoryStats = "<h3>Statistik Kategori:</h3>";
+                for (var category in categories) {
+                    categoryStats += "<p>" + category + ": " + categories[category] + " buku ditemukan.</p>";
+                }
+                statsDiv.innerHTML += categoryStats;
             }
-        });
+        }
     </script>
-
 </body>
 </html>
