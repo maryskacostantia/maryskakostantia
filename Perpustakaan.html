@@ -1,0 +1,70 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Perpustakaan</h1>
+    <label for="search">Cari Buku:</label>
+    <input type="text" id="search" placeholder="Masukkan judul buku">
+    <button onclick="searchBook()">Cari</button>
+
+    <h2>Daftar Buku:</h2>
+    <ul id="book-list">
+        <li>JavaScript Dasar</li>
+        <li>Belajar HTML dan CSS</li>
+        <li>Pemrograman Python</li>
+        <li>Node.js untuk Pemula</li>
+        <li>Framework React</li>
+    </ul>
+
+    <div id="result"></div>
+
+    <script>
+        // Daftar buku dalam variabel
+        var books = [
+            "JavaScript Dasar",
+            "Belajar HTML dan CSS",
+            "Pemrograman Python",
+            "Node.js untuk Pemula",
+            "Framework React"
+        ];
+
+        // Fungsi untuk mencari buku
+        function searchBook() {
+            // Mendapatkan input dari pengguna
+            var searchTerm = document.getElementById("search").value;
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ""; // Kosongkan hasil sebelumnya
+
+            // Menggunakan perulangan untuk memeriksa setiap buku
+            var found = false; // Variabel untuk menandai apakah buku ditemukan
+            for (var i = 0; i < books.length; i++) {
+                // Menggunakan kondisi untuk memeriksa kecocokan
+                if (books[i].toLowerCase().includes(searchTerm.toLowerCase())) {
+                    resultDiv.innerHTML += "<p>Buku ditemukan: " + books[i] + "</p>";
+                    found = true; // Menandai bahwa buku ditemukan
+                }
+            }
+
+            // Jika tidak ada buku yang ditemukan
+            if (!found) {
+                resultDiv.innerHTML = "<p>Tidak ada buku yang ditemukan.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
