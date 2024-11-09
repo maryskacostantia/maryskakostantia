@@ -309,36 +309,133 @@
         }
     </style>
     
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan Online</title>
+    <title>Pameran Buku</title>
     <style>
+        /* General styling */
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f9;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             text-align: center;
+            color: #333;
         }
-        .book-list {
-            margin-top: 20px;
+
+        /* Gallery styling */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
+
         .book-item {
-            margin: 10px 0;
+            margin: 15px;
+            text-align: center;
+        }
+
+        .book-item img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .book-item img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Description styling */
+        .description {
+            display: none;
+            margin-top: 10px;
             padding: 10px;
-            background-color: #e0e0e0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
             border-radius: 5px;
         }
-        .alert {
-            color: red;
-            font-weight: bold;
+
+        /* Navbar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
         }
-        .info {
-            color: green;
+
+        /* Navbar link hover effect */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown button */
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside dropdown */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        /* Dropdown link hover effect */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Dropdown button hover effect */
+        .dropdown:hover .dropbtn {
+            background-color: #555;
         }
     </style>
 </head>
@@ -358,6 +455,30 @@
 
     <div id="message" class="alert"></div>
 
+    <div class="container">
+        <h1>Pameran Buku</h1>
+        <div class="gallery">
+            <div class="book-item">
+                <img src="https://via.placeholder.com/200x300?text=Buku+1" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
+                <div id="deskripsiBuku1" class="description">
+                    <p><strong>Buku 1:</strong> Buku ini menceritakan petualangan seru di dunia fantasi. Ikuti kisahnya yang penuh misteri!</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="https://via.placeholder.com/200x300?text=Buku+2" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
+                <div id="deskripsiBuku2" class="description">
+                    <p><strong>Buku 2:</strong> Buku ini membahas kehidupan sehari-hari dengan humor yang menghibur. Cocok untuk semua kalangan.</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="https://via.placeholder.com/200x300?text=Buku+3" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
+                <div id="deskripsiBuku3" class="description">
+                    <p><strong>Buku 3:</strong> Sebuah novel inspiratif yang mengajak pembaca untuk mengejar impian mereka tanpa takut gagal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // 1. Variabel untuk menyimpan daftar buku
         let books = [
@@ -376,7 +497,6 @@
                 let book = books[i];
                 let bookItem = document.createElement("div");
                 bookItem.classList.add("book-item");
-
                 bookItem.innerHTML = `<strong>${book.title}</strong> oleh ${book.author} - ${book.available ? 'Tersedia' : 'Tidak Tersedia'}`;
                 bookListDiv.appendChild(bookItem);
             }
@@ -424,107 +544,14 @@
 
         // Menampilkan daftar buku saat halaman dimuat
         window.onload = displayBooks;
-    </script>
 
-</body>
-</html>
-
-
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pameran Buku</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .book-item {
-            margin: 15px;
-            text-align: center;
-        }
-
-        .book-item img {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .book-item img:hover {
-            transform: scale(1.1);
-        }
-
-        .description {
-            display: none;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Pameran Buku</h1>
-
-        <div class="gallery">
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+1" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
-                <div id="deskripsiBuku1" class="description">
-                    <p><strong>Buku 1:</strong> Buku ini menceritakan petualangan seru di dunia fantasi. Ikuti kisahnya yang penuh misteri!</p>
-                </div>
-            </div>
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+2" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
-                <div id="deskripsiBuku2" class="description">
-                    <p><strong>Buku 2:</strong> Buku ini membahas kehidupan sehari-hari dengan humor yang menghibur. Cocok untuk semua kalangan.</p>
-                </div>
-            </div>
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+3" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
-                <div id="deskripsiBuku3" class="description">
-                    <p><strong>Buku 3:</strong> Sebuah novel inspiratif yang mengajak pembaca untuk mengejar impian mereka tanpa takut gagal.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
+        // Show description of clicked book
         function showDescription(id) {
-            // Menyembunyikan semua deskripsi
             let descriptions = document.querySelectorAll('.description');
             descriptions.forEach(function(description) {
                 description.style.display = 'none';
             });
 
-            // Menampilkan deskripsi yang diklik
             let descriptionToShow = document.getElementById(id);
             descriptionToShow.style.display = 'block';
         }
