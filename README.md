@@ -308,74 +308,123 @@
             color: green;
         }
     </style>
-
+    
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan</title>
+    <title>Perpustakaan Online</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f9;
         }
-        input, button {
-            margin: 5px 0;
+        h1 {
+            text-align: center;
         }
-        #result {
+        .book-list {
             margin-top: 20px;
+        }
+        .book-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+        .info {
+            color: green;
         }
     </style>
 </head>
 <body>
-    <h1>Perpustakaan</h1>
-    <label for="search">Cari Buku:</label>
-    <input type="text" id="search" placeholder="Masukkan judul buku">
-    <button onclick="searchBook()">Cari</button>
 
-    <h2>Daftar Buku:</h2>
-    <ul id="book-list">
-        <li>JavaScript Dasar</li>
-        <li>Belajar HTML dan CSS</li>
-        <li>Pemrograman Python</li>
-        <li>Node.js untuk Pemula</li>
-        <li>Framework React</li>
-    </ul>
+    <h1>Selamat datang di Perpustakaan Online</h1>
+    <div id="book-list" class="book-list">
+        <h2>Daftar Buku:</h2>
+        <!-- List buku akan ditampilkan di sini -->
+    </div>
 
-    <div id="result"></div>
+    <div>
+        <label for="bookCount">Masukkan jumlah buku yang ingin dipinjam:</label>
+        <input type="number" id="bookCount" min="1" max="10">
+        <button onclick="borrowBooks()">Pinjam Buku</button>
+    </div>
+
+    <div id="message" class="alert"></div>
 
     <script>
-        // Daftar buku dalam variabel
-        var books = [
-            "JavaScript Dasar",
-            "Belajar HTML dan CSS",
-            "Pemrograman Python",
-            "Node.js untuk Pemula",
-            "Framework React"
+        // 1. Variabel untuk menyimpan daftar buku
+        let books = [
+            { title: "Pemrograman Web", author: "John Doe", available: true },
+            { title: "Algoritma Dasar", author: "Jane Smith", available: true },
+            { title: "Pemrograman Python", author: "Mark Lee", available: false },
+            { title: "Database Modern", author: "Sara Ali", available: true },
+            { title: "Sistem Operasi", author: "David Kim", available: false }
         ];
 
-        // Fungsi untuk mencari buku
-        function searchBook() {
-            // Mendapatkan input dari pengguna
-            var searchTerm = document.getElementById("search").value;
-            var resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = ""; // Kosongkan hasil sebelumnya
+        // 2. Menampilkan daftar buku
+        function displayBooks() {
+            const bookListDiv = document.getElementById("book-list");
+            bookListDiv.innerHTML = "<h2>Daftar Buku:</h2>"; // Reset daftar buku
+            for (let i = 0; i < books.length; i++) {
+                let book = books[i];
+                let bookItem = document.createElement("div");
+                bookItem.classList.add("book-item");
 
-            // Menggunakan perulangan untuk memeriksa setiap buku
-            var found = false; // Variabel untuk menandai apakah buku ditemukan
-            for (var i = 0; i < books.length; i++) {
-                // Menggunakan kondisi untuk memeriksa kecocokan
-                if (books[i].toLowerCase().includes(searchTerm.toLowerCase())) {
-                    resultDiv.innerHTML += "<p>Buku ditemukan: " + books[i] + "</p>";
-                    found = true; // Menandai bahwa buku ditemukan
+                bookItem.innerHTML = `<strong>${book.title}</strong> oleh ${book.author} - ${book.available ? 'Tersedia' : 'Tidak Tersedia'}`;
+                bookListDiv.appendChild(bookItem);
+            }
+        }
+
+        // 3. Fungsi untuk meminjam buku
+        function borrowBooks() {
+            const bookCount = parseInt(document.getElementById("bookCount").value);
+            const messageDiv = document.getElementById("message");
+
+            if (isNaN(bookCount) || bookCount < 1) {
+                messageDiv.textContent = "Harap masukkan jumlah buku yang valid!";
+                return;
+            }
+
+            // 4. Kondisi: Mengecek jumlah buku yang ingin dipinjam
+            if (bookCount > books.length) {
+                messageDiv.textContent = `Hanya ada ${books.length} buku yang tersedia.`;
+                return;
+            }
+
+            // 5. Perulangan untuk memeriksa buku yang tersedia
+            let booksToBorrow = [];
+            for (let i = 0; i < books.length; i++) {
+                if (books[i].available && booksToBorrow.length < bookCount) {
+                    booksToBorrow.push(books[i].title);
+                    books[i].available = false;  // Menandakan buku sudah dipinjam
                 }
             }
 
-            // Jika tidak ada buku yang ditemukan
-            if (!found) {
-                resultDiv.innerHTML = "<p>Tidak ada buku yang ditemukan.</p>";
+            // 6. Struktur kondisi untuk memberi pesan
+            if (booksToBorrow.length > 0) {
+                messageDiv.classList.remove("alert");
+                messageDiv.classList.add("info");
+                messageDiv.textContent = `Anda berhasil meminjam buku: ${booksToBorrow.join(", ")}.`;
+            } else {
+                messageDiv.classList.remove("info");
+                messageDiv.classList.add("alert");
+                messageDiv.textContent = "Tidak ada buku yang tersedia untuk dipinjam.";
             }
+
+            // Menampilkan daftar buku terbaru setelah peminjaman
+            displayBooks();
         }
+
+        // Menampilkan daftar buku saat halaman dimuat
+        window.onload = displayBooks;
     </script>
+
 </body>
 </html>
