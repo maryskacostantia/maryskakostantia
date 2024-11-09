@@ -314,7 +314,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pameran Buku</title>
+    <title>Perpustakaan Online</title>
     <style>
         /* General styling */
         body {
@@ -332,155 +332,60 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #333;
         }
 
-        /* Gallery styling */
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .book-item {
-            margin: 15px;
-            text-align: center;
-        }
-
-        .book-item img {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .book-item img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Description styling */
-        .description {
-            display: none;
-            margin-top: 10px;
+        /* Book list styling */
+        .book-list .book-item {
             padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .book-list .book-item:last-child {
+            border-bottom: none;
+        }
+
+        .alert, .info {
+            margin: 20px 0;
+            padding: 15px;
             border-radius: 5px;
-        }
-
-        /* Navbar links */
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
             text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
         }
 
-        /* Navbar link hover effect */
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+        .alert {
+            background-color: #f8d7da;
+            color: #721c24;
         }
 
-        /* Dropdown container */
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        /* Dropdown button */
-        .dropdown .dropbtn {
-            cursor: pointer;
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-        }
-
-        /* Dropdown content */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        /* Links inside dropdown */
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            text-align: left;
-        }
-
-        /* Dropdown link hover effect */
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        /* Show dropdown content on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Dropdown button hover effect */
-        .dropdown:hover .dropbtn {
-            background-color: #555;
+        .info {
+            background-color: #d4edda;
+            color: #155724;
         }
     </style>
 </head>
 <body>
 
-    <h1>Selamat datang di Perpustakaan Online</h1>
-    <div id="book-list" class="book-list">
-        <h2>Daftar Buku:</h2>
-        <!-- List buku akan ditampilkan di sini -->
-    </div>
-
-    <div>
-        <label for="bookCount">Masukkan jumlah buku yang ingin dipinjam:</label>
-        <input type="number" id="bookCount" min="1" max="10">
-        <button onclick="borrowBooks()">Pinjam Buku</button>
-    </div>
-
-    <div id="message" class="alert"></div>
-
     <div class="container">
-        <h1>Pameran Buku</h1>
-        <div class="gallery">
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+1" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
-                <div id="deskripsiBuku1" class="description">
-                    <p><strong>Buku 1:</strong> Buku ini menceritakan petualangan seru di dunia fantasi. Ikuti kisahnya yang penuh misteri!</p>
-                </div>
-            </div>
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+2" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
-                <div id="deskripsiBuku2" class="description">
-                    <p><strong>Buku 2:</strong> Buku ini membahas kehidupan sehari-hari dengan humor yang menghibur. Cocok untuk semua kalangan.</p>
-                </div>
-            </div>
-            <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+3" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
-                <div id="deskripsiBuku3" class="description">
-                    <p><strong>Buku 3:</strong> Sebuah novel inspiratif yang mengajak pembaca untuk mengejar impian mereka tanpa takut gagal.</p>
-                </div>
-            </div>
+        <h1>Selamat datang di Perpustakaan Online</h1>
+
+        <div id="book-list" class="book-list">
+            <h2>Daftar Buku:</h2>
+            <!-- List buku akan ditampilkan di sini -->
         </div>
+
+        <div>
+            <label for="bookCount">Masukkan jumlah buku yang ingin dipinjam:</label>
+            <input type="number" id="bookCount" min="1" max="10">
+            <button onclick="borrowBooks()">Pinjam Buku</button>
+        </div>
+
+        <div id="message" class="alert"></div>
     </div>
 
     <script>
-        // 1. Variabel untuk menyimpan daftar buku
+        // Array of book objects
         let books = [
             { title: "Pemrograman Web", author: "John Doe", available: true },
             { title: "Algoritma Dasar", author: "Jane Smith", available: true },
@@ -489,7 +394,7 @@
             { title: "Sistem Operasi", author: "David Kim", available: false }
         ];
 
-        // 2. Menampilkan daftar buku
+        // Function to display books
         function displayBooks() {
             const bookListDiv = document.getElementById("book-list");
             bookListDiv.innerHTML = "<h2>Daftar Buku:</h2>"; // Reset daftar buku
@@ -502,59 +407,44 @@
             }
         }
 
-        // 3. Fungsi untuk meminjam buku
+        // Function to borrow books
         function borrowBooks() {
             const bookCount = parseInt(document.getElementById("bookCount").value);
             const messageDiv = document.getElementById("message");
 
             if (isNaN(bookCount) || bookCount < 1) {
+                messageDiv.className = "alert";
                 messageDiv.textContent = "Harap masukkan jumlah buku yang valid!";
                 return;
             }
 
-            // 4. Kondisi: Mengecek jumlah buku yang ingin dipinjam
-            if (bookCount > books.length) {
-                messageDiv.textContent = `Hanya ada ${books.length} buku yang tersedia.`;
+            // Check the number of available books
+            let availableBooks = books.filter(book => book.available);
+            if (bookCount > availableBooks.length) {
+                messageDiv.className = "alert";
+                messageDiv.textContent = `Hanya ada ${availableBooks.length} buku yang tersedia.`;
                 return;
             }
 
-            // 5. Perulangan untuk memeriksa buku yang tersedia
+            // Borrow the requested number of books
             let booksToBorrow = [];
-            for (let i = 0; i < books.length; i++) {
-                if (books[i].available && booksToBorrow.length < bookCount) {
+            for (let i = 0; i < books.length && booksToBorrow.length < bookCount; i++) {
+                if (books[i].available) {
                     booksToBorrow.push(books[i].title);
-                    books[i].available = false;  // Menandakan buku sudah dipinjam
+                    books[i].available = false;  // Mark the book as borrowed
                 }
             }
 
-            // 6. Struktur kondisi untuk memberi pesan
-            if (booksToBorrow.length > 0) {
-                messageDiv.classList.remove("alert");
-                messageDiv.classList.add("info");
-                messageDiv.textContent = `Anda berhasil meminjam buku: ${booksToBorrow.join(", ")}.`;
-            } else {
-                messageDiv.classList.remove("info");
-                messageDiv.classList.add("alert");
-                messageDiv.textContent = "Tidak ada buku yang tersedia untuk dipinjam.";
-            }
+            // Display success message
+            messageDiv.className = "info";
+            messageDiv.textContent = `Anda berhasil meminjam buku: ${booksToBorrow.join(", ")}.`;
 
-            // Menampilkan daftar buku terbaru setelah peminjaman
+            // Update the book list
             displayBooks();
         }
 
-        // Menampilkan daftar buku saat halaman dimuat
+        // Show the list of books on page load
         window.onload = displayBooks;
-
-        // Show description of clicked book
-        function showDescription(id) {
-            let descriptions = document.querySelectorAll('.description');
-            descriptions.forEach(function(description) {
-                description.style.display = 'none';
-            });
-
-            let descriptionToShow = document.getElementById(id);
-            descriptionToShow.style.display = 'block';
-        }
     </script>
 
 </body>
