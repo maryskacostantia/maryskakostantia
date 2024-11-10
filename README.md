@@ -449,7 +449,6 @@
 </body>
 </html>
 
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -516,19 +515,19 @@
 
         <div class="gallery">
             <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+1" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
+                <img src="buku 1.png" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
                 <div id="deskripsiBuku1" class="description">
                     <p><strong>Buku 1:</strong> Buku ini menceritakan petualangan seru di dunia fantasi. Ikuti kisahnya yang penuh misteri!</p>
                 </div>
             </div>
             <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+2" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
+                <img src="buku 2.jpeg" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
                 <div id="deskripsiBuku2" class="description">
                     <p><strong>Buku 2:</strong> Buku ini membahas kehidupan sehari-hari dengan humor yang menghibur. Cocok untuk semua kalangan.</p>
                 </div>
             </div>
             <div class="book-item">
-                <img src="https://via.placeholder.com/200x300?text=Buku+3" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
+                <img src="buku 3.png" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
                 <div id="deskripsiBuku3" class="description">
                     <p><strong>Buku 3:</strong> Sebuah novel inspiratif yang mengajak pembaca untuk mengejar impian mereka tanpa takut gagal.</p>
                 </div>
