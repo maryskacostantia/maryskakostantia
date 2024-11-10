@@ -523,7 +523,7 @@
             <div class="book-item">
                 <img src="buku 2.jpeg" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
                 <div id="deskripsiBuku2" class="description">
-                    <p><strong>Buku 2:</strong> Buku ini membahas kehidupan sehari-hari dengan humor yang menghibur. Cocok untuk semua kalangan.</p>
+                    <p><strong>Buku 2:</strong> Buku ini memahami Konsep Dasar Pemrograman Free Pascal & Database Bagi Mahasiswa merupakan karya Yuliana Mose, Dedi Sorongan dan Agatha C.E.M Jamlean. Buku ini membahas tentang peran algoritma dalam komputasi, dasar-dasar algoritma, interpretasi persoalan ke dalam flowchart, mengenal bahasa pemrograman, tipe data, struktur program, membangun program aplikasi, studi kasus permasalahan sederhana, studi kasus konversi, studi kasus percabangan lanjutan, studi kasus perulangan, studi kasus struktur logika case, studi kasus procedure & function, analisis algoritma program aplikasi terpublikasi jurnal ilmiah, serta menggunakan database.</p>
                 </div>
             </div>
             <div class="book-item">
