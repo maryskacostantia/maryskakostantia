@@ -674,3 +674,32 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugin jQuery Sederhana</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+</head>
+<body>
+
+    <h1>Contoh Penggunaan Plugin jQuery</h1>
+    <div class="box">Kotak 1</div>
+    <div class="box">Kotak 2</div>
+    <div class="box">Kotak 3</div>
+
+    <button id="changeColor">Ubah Warna</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#changeColor').click(function() {
+                $('.box').changeBgColor({ background: 'lightblue' });
+            });
+        });
+    </script>
+
+</body>
+</html>
