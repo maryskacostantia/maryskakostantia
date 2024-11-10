@@ -549,157 +549,16 @@
         }
     </script>
 
-<!DOCTYPE html>
-<html lang="id">
+<footer>
+    <p>© 2024 Perpustakaan Maryska Kostantia</p>
+</footer>
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #bookList {
-            margin-top: 20px;
-        }
-        .book-item {
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
-
-    <h1>Selamat Datang di Perpustakaan</h1>
-    
-    <div>
-        <input type="text" id="bookTitle" placeholder="Masukkan judul buku" />
-        <button id="addBook">Tambah Buku</button>
-    </div>
-
-    <div id="bookList">
-        <h2>Daftar Buku:</h2>
-        <!-- Daftar buku akan ditambahkan di sini -->
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            // Fungsi untuk menambahkan buku ke dalam daftar
-            $("#addBook").click(function() {
-                var title = $("#bookTitle").val();
-                if (title) {
-                    $("#bookList").append("<div class='book-item'>" + title + "</div>");
-                    $("#bookTitle").val(""); // Kosongkan input setelah ditambahkan
-                } else {
-                    alert("Silakan masukkan judul buku.");
-                }
-            });
-
-            // Efek animasi menggunakan jQuery UI
-            $(document).on("mouseenter", ".book-item", function() {
-                $(this).effect("highlight", {}, 1000);
-            });
-        });
-    </script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #bookList {
-            margin-top: 20px;
-        }
-        .book-item {
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Selamat Datang di Perpustakaan</h1>
-    
-    <div>
-        <input type="text" id="bookTitle" placeholder="Masukkan judul buku" />
-        <button id="addBook">Tambah Buku</button>
-    </div>
-
-    <div id="bookList">
-        <h2>Daftar Buku:</h2>
-        <!-- Daftar buku akan ditambahkan di sini -->
-    </div>
-
-    <script>
-        // Struktur jQuery
-        $(document).ready(function() {
-            // Fungsi untuk menambahkan buku ke dalam daftar
-            $("#addBook").click(function() {
-                var title = $("#bookTitle").val(); // Ambil nilai dari input
-                if (title) {
-                    // Tambahkan buku ke dalam daftar
-                    $("#bookList").append("<div class='book-item'>" + title + "</div>");
-                    $("#bookTitle").val(""); // Kosongkan input setelah ditambahkan
-                } else {
-                    alert("Silakan masukkan judul buku."); // Pesan jika input kosong
-                }
-            });
-
-            // Efek animasi menggunakan jQuery UI
-            $(document).on("mouseenter", ".book-item", function() {
-                $(this).effect("highlight", {}, 1000); // Efek highlight saat mouse hover
-            });
-        });
-    </script>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plugin jQuery Sederhana</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-</head>
-<body>
-
-    <h1>Contoh Penggunaan Plugin jQuery</h1>
-    <div class="box">Kotak 1</div>
-    <div class="box">Kotak 2</div>
-    <div class="box">Kotak 3</div>
-
-    <button id="changeColor">Ubah Warna</button>
-
-    <script>
-        $(document).ready(function() {
-            $('#changeColor').click(function() {
-                $('.box').changeBgColor({ background: 'lightblue' });
-            });
-        });
-    </script>
-
+    <h2 style="color: blue; font-family: sans;"></h2>
+    <p style="color: green;"></p>
 </body>
 </html>
