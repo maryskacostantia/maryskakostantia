@@ -282,20 +282,6 @@
     </section>
 </main>
 
-<footer>
-    <p>© 2024 Perpustakaan Maryska Kostantia</p>
-</footer>
-
-<html>
-<head>
-    <title>Perpustakaan</title>
-</head>
-<body>
-    <h2 style="color: blue; font-family: sans;"></h2>
-    <p style="color: green;"></p>
-</body>
-</html>
-
 <html>
 <head>
     <title>Perpustakaan</title>
