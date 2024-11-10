@@ -529,7 +529,7 @@
             <div class="book-item">
                 <img src="buku 3.png" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
                 <div id="deskripsiBuku3" class="description">
-                    <p><strong>Buku 3:</strong> Sebuah novel inspiratif yang mengajak pembaca untuk mengejar impian mereka tanpa takut gagal.</p>
+                    <p><strong>Buku 3:</strong> Rangkaian konferensi DEXA telah mendapatkan reputasinya sendiri dan posisi yang dihormati sebagai platform untuk pertukaran ide di antara para ahli teori dan praktisi di bidang ilmu komputer yang lebih luas, namun terutama di bidang basis data dan teknologi berbasis pengetahuan.</p>
                 </div>
             </div>
         </div>
