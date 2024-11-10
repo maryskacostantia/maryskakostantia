@@ -517,7 +517,7 @@
             <div class="book-item">
                 <img src="buku 1.png" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
                 <div id="deskripsiBuku1" class="description">
-                    <p><strong>Buku 1:</strong> Buku ini menceritakan petualangan seru di dunia fantasi. Ikuti kisahnya yang penuh misteri!</p>
+                    <p><strong>Buku 1:</strong> Dunia sekarang yang tak bisa lepas dari penggunaan internet membuat ketersediaan website terasa penting. Oleh sebab itu, penting untuk tahu dan paham pemrograman web supaya mampu membuat web sendiri demi kepentingan pribadi. Buku ini membantu siapa pun yang ingin membuat web untuk pertama kalinya.!</p>
                 </div>
             </div>
             <div class="book-item">
