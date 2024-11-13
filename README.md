@@ -604,3 +604,32 @@
     <p style="color: green;"></p>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Bilangan</title>
+</head>
+<body>
+    <h1>Hitung Dua Bilangan</h1>
+    <form action="hasil.html" method="GET">
+        <label for="bilangan1">Bilangan Pertama:</label>
+        <input type="number" id="bilangan1" name="bilangan1" required><br><br>
+
+        <label for="bilangan2">Bilangan Kedua:</label>
+        <input type="number" id="bilangan2" name="bilangan2" required><br><br>
+
+        <label for="operasi">Pilih Operasi:</label>
+        <select id="operasi" name="operasi">
+            <option value="tambah">Tambah</option>
+            <option value="kurang">Kurang</option>
+            <option value="kali">Kali</option>
+            <option value="bagi">Bagi</option>
+        </select><br><br>
+
+        <input type="submit" value="Hitung">
+    </form>
+</body>
+</html>
