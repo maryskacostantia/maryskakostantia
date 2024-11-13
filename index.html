@@ -46,6 +46,67 @@
     .dropdown:hover .dropdown-child {
       display: block;
     }
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Perpustakaan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .content {
+      margin: 20px;
+      text-align: center;
+    }
+    .library-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .library-item {
+      background-color: white;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .library-item img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .library-item h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .library-item p {
+      font-size: 14px;
+      color: #666;
+    }
+    .library-item a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .library-item a:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
@@ -53,13 +114,56 @@
   <div class="dropdown">
     <button class="mainmenubtn">Main Menu</button>
     <div class="dropdown-child">
-      <a href="http://www.yourdomain.com/page1.html">Sub Menu 1</a>
-      <a href="http://www.yourdomain.com/page2.html">Sub Menu 2</a>
-      <a href="http://www.yourdomain.com/page3.html">Sub Menu 3</a>
-      <a href="http://www.yourdomain.com/page4.html">Sub Menu 4</a>
-      <a href="http://www.yourdomain.com/page5.html">Sub Menu 5</a>
+      <a href="http://www.yourdomain.com/page2.html">Sub Menu 1</a>
+      <a href="http://www.yourdomain.com/page3.html">Sub Menu 2</a>
+      <a href="http://www.yourdomain.com/page4.html">Sub Menu 3</a>
+      <a href="http://www.yourdomain.com/page1.html">Sub Menu 4</a>
+      <a href="http://www.yourdomain.com/page2.html">Sub Menu 5</a>
+      <a href="http://www.yourdomain.com/page3.html">Sub Menu 6</a>
+      <a href="http://www.yourdomain.com/page4.html">Sub Menu 7</a>
+      <a href="http://www.yourdomain.com/page5.html">Sub Menu 8</a>
     </div>
   </div>
+<header>
+    <h1>Daftar Perpustakaan di Indonesia</h1>
+  </header>
 
+  <div class="content">
+    <h2>Berikut adalah beberapa perpustakaan terkenal di Indonesia</h2>
+
+    <div class="library-list">
+      <!-- Perpustakaan 1 -->
+      <div class="library-item">
+        <img src="https://via.placeholder.com/280x180" alt="Perpustakaan Nasional">
+        <h3>Perpustakaan Nasional</h3>
+        <p>Perpustakaan Nasional Indonesia adalah perpustakaan terbesar di Indonesia yang memiliki koleksi buku lengkap.</p>
+        <a href="https://www.perpusnas.go.id/" target="_blank">Kunjungi</a>
+      </div>
+
+      <!-- Perpustakaan 2 -->
+      <div class="library-item">
+        <img src="https://via.placeholder.com/280x180" alt="Perpustakaan UI">
+        <h3>Perpustakaan Universitas Indonesia</h3>
+        <p>Perpustakaan Universitas Indonesia menyimpan berbagai koleksi buku akademik dan penelitian untuk mahasiswa.</p>
+        <a href="https://lib.ui.ac.id/" target="_blank">Kunjungi</a>
+      </div>
+
+      <!-- Perpustakaan 3 -->
+      <div class="library-item">
+        <img src="https://via.placeholder.com/280x180" alt="Perpustakaan UGM">
+        <h3>Perpustakaan Universitas Gadjah Mada</h3>
+        <p>Perpustakaan UGM menyediakan berbagai sumber daya untuk mendukung kegiatan akademik di seluruh kampus.</p>
+        <a href="https://www.lib.ugm.ac.id/" target="_blank">Kunjungi</a>
+      </div>
+
+      <!-- Perpustakaan 4 -->
+      <div class="library-item">
+        <img src="https://via.placeholder.com/280x180" alt="Perpustakaan Unair">
+        <h3>Perpustakaan Universitas Airlangga</h3>
+        <p>Perpustakaan Unair memiliki koleksi buku yang sangat lengkap untuk keperluan penelitian dan akademik.</p>
+        <a href="https://www.lib.unair.ac.id/" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
