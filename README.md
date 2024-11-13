@@ -633,3 +633,94 @@
     </form>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+</head>
+<body>
+    <h1>Hasil Perhitungan</h1>
+
+    <?php
+    if (isset($_GET['bilangan1']) && isset($_GET['bilangan2']) && isset($_GET['operasi'])) {
+        $bilangan1 = $_GET['bilangan1'];
+        $bilangan2 = $_GET['bilangan2'];
+        $operasi = $_GET['operasi'];
+        
+        switch ($operasi) {
+            case 'tambah':
+                $hasil = $bilangan1 + $bilangan2;
+                break;
+            case 'kurang':
+                $hasil = $bilangan1 - $bilangan2;
+                break;
+            case 'kali':
+                $hasil = $bilangan1 * $bilangan2;
+                break;
+            case 'bagi':
+                if ($bilangan2 != 0) {
+                    $hasil = $bilangan1 / $bilangan2;
+                } else {
+                    $hasil = "Tidak dapat dibagi dengan nol.";
+                }
+                break;
+            default:
+                $hasil = "Operasi tidak valid.";
+        }
+
+        echo "<p>Hasil: " . htmlspecialchars($hasil) . "</p>";
+    } else {
+        echo "<p>Input tidak lengkap.</p>";
+    }
+    ?>
+
+    <a href="index.html">Kembali ke Input</a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+</head>
+<body>
+    <h1>Login Pengguna</h1>
+
+    <?php
+    session_start();
+    
+    // Simulasi data username dan password
+    $valid_username = "user";
+    $valid_password = "pass";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if (empty($username) || empty($password)) {
+            echo "<p style='color:red;'>Input tidak lengkap. Silakan masukkan username dan password.</p>";
+        } elseif ($username === $valid_username && $password === $valid_password) {
+            echo "<p style='color:green;'>Login sukses! Selamat datang, " . htmlspecialchars($username) . ".</p>";
+        } else {
+            echo "<p style='color:red;'>Login gagal! Username atau password salah.</p>";
+        }
+    }
+    ?>
+
+    <form action="" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html>
