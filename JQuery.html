@@ -1,3 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Online</title>
+
+    <!-- Link ke jQuery dari CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link ke plugin jQuery (misalnya plugin untuk animasi atau filter) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- CSS untuk styling halaman -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .book-list {
+            margin: 20px;
+        }
+        .book-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .book-author {
+            color: #555;
+        }
+        #search-bar {
+            margin: 20px;
+            padding: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Perpustakaan Online</h1>
+</header>
+
+<div class="container">
+    <!-- Kolom pencarian buku -->
+    <input type="text" id="search-bar" placeholder="Cari Buku..." />
+
+    <!-- Daftar Buku -->
+    <div class="book-list" id="book-list">
+        <div class="book-item">
+            <p class="book-title">Pemrograman Web</p>
+            <p class="book-author">Penulis: Andi Susanto</p>
+        </div>
+        <div class="book-item">
+            <p class="book-title">Belajar JavaScript</p>
+            <p class="book-author">Penulis: Rina Ayu</p>
+        </div>
+        <div class="book-item">
+            <p class="book-title">Dasar-Dasar HTML & CSS</p>
+            <p class="book-author">Penulis: Budi Santoso</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript untuk jQuery dan Plugin -->
+<script>
+    $(document).ready(function () {
+        // Pencarian buku dengan efek jQuery UI Autocomplete
+        var books = [
+            { label: "Pemrograman Web", value: "Pemrograman Web" },
+            { label: "Belajar JavaScript", value: "Belajar JavaScript" },
+            { label: "Dasar-Dasar HTML & CSS", value: "Dasar-Dasar HTML & CSS" }
+        ];
+
+        // Menambahkan fitur pencarian buku
+        $("#search-bar").autocomplete({
+            source: books,
+            minLength: 1,
+            select: function (event, ui) {
+                alert("Anda memilih buku: " + ui.item.value);
+            }
+        });
+
+        // Menyembunyikan atau menampilkan buku berdasarkan pencarian
+        $("#search-bar").on("keyup", function () {
+            var searchTerm = $(this).val().toLowerCase();
+            $(".book-item").each(function () {
+                var title = $(this).find(".book-title").text().toLowerCase();
+                if (title.indexOf(searchTerm) !== -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
 
 <!-- CSS untuk Desain Halaman -->
     <style>
