@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Belajar PHP</title>
+</head>
+<body>
+    <h1>Ini adalah hari-hari belajar PHP</h1>
+    <?php
+    // Loop untuk menampilkan hari ke-1 sampai ke-1000
+    for ($i = 1; $i <= 1000; $i++) {
+        echo "Ini adalah hari ke-$i belajar PHP <br>";
+    }
+    ?>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Operasi</title>
+</head>
+<body>
+    <h1>Masukkan Dua Bilangan</h1>
+    <form action="hasil.php" method="POST">
+        <label for="bil1">Bilangan 1:</label>
+        <input type="number" id="bil1" name="bil1" required><br><br>
+
+        <label for="bil2">Bilangan 2:</label>
+        <input type="number" id="bil2" name="bil2" required><br><br>
+
+        <label for="operasi">Pilih Operasi:</label>
+        <select id="operasi" name="operasi" required>
+            <option value="tambah">Penjumlahan</option>
+            <option value="kurang">Pengurangan</option>
+            <option value="kali">Perkalian</option>
+            <option value="bagi">Pembagian</option>
+        </select><br><br>
+
+        <button type="submit">Hitung</button>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Perhitungan</title>
+</head>
+<body>
+    <h1>Hasil Perhitungan</h1>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Ambil data dari form
+        $bil1 = $_POST['bil1'];
+        $bil2 = $_POST['bil2'];
+        $operasi = $_POST['operasi'];
+
+        // Proses perhitungan berdasarkan operasi yang dipilih
+        switch ($operasi) {
+            case 'tambah':
+                $hasil = $bil1 + $bil2;
+                echo "Hasil Penjumlahan: $hasil";
+                break;
+            case 'kurang':
+                $hasil = $bil1 - $bil2;
+                echo "Hasil Pengurangan: $hasil";
+                break;
+            case 'kali':
+                $hasil = $bil1 * $bil2;
+                echo "Hasil Perkalian: $hasil";
+                break;
+            case 'bagi':
+                if ($bil2 == 0) {
+                    echo "Pembagian dengan nol tidak dapat dilakukan.";
+                } else {
+                    $hasil = $bil1 / $bil2;
+                    echo "Hasil Pembagian: $hasil";
+                }
+                break;
+            default:
+                echo "Operasi tidak valid.";
+        }
+    }
+    ?>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
+
+<?php
+// Data login yang benar (misalnya, ID dan Password yang sudah ditentukan)
+$valid_username = "admin";
+$valid_password = "12345";
+
+// Cek apakah form telah disubmit
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Ambil data dari form
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Validasi input
+    if (empty($username) || empty($password)) {
+        echo "Input tidak lengkap. Harap isi username dan password.";
+    } elseif ($username === $valid_username && $password === $valid_password) {
+        echo "Login Sukses! Selamat datang, $username.";
+    } else {
+        echo "Login Gagal. Username atau Password salah.";
+    }
+}
+?>
