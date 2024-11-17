@@ -114,25 +114,3 @@
     </form>
 </body>
 </html>
-
-<?php
-// Data login yang benar (misalnya, ID dan Password yang sudah ditentukan)
-$valid_username = "admin";
-$valid_password = "12345";
-
-// Cek apakah form telah disubmit
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Validasi input
-    if (empty($username) || empty($password)) {
-        echo "Input tidak lengkap. Harap isi username dan password.";
-    } elseif ($username === $valid_username && $password === $valid_password) {
-        echo "Login Sukses! Selamat datang, $username.";
-    } else {
-        echo "Login Gagal. Username atau Password salah.";
-    }
-}
-?>
