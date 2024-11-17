@@ -1,0 +1,240 @@
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Online</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Book list styling */
+        .book-list .book-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .book-list .book-item:last-child {
+            border-bottom: none;
+        }
+
+        .alert, .info {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .alert {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .info {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Selamat datang di Perpustakaan Online</h1>
+
+        <div id="book-list" class="book-list">
+            <h2>Daftar Buku:</h2>
+            <!-- List buku akan ditampilkan di sini -->
+        </div>
+
+        <div>
+            <label for="bookCount">Masukkan jumlah buku yang ingin dipinjam:</label>
+            <input type="number" id="bookCount" min="1" max="10">
+            <button onclick="borrowBooks()">Pinjam Buku</button>
+        </div>
+
+        <div id="message" class="alert"></div>
+    </div>
+
+    <script>
+        // Array of book objects
+        let books = [
+            { title: "Pemrograman Web", author: "John Doe", available: true },
+            { title: "Algoritma Dasar", author: "Jane Smith", available: true },
+            { title: "Pemrograman Python", author: "Mark Lee", available: false },
+            { title: "Database Modern", author: "Sara Ali", available: true },
+            { title: "Sistem Operasi", author: "David Kim", available: false }
+        ];
+
+        // Function to display books
+        function displayBooks() {
+            const bookListDiv = document.getElementById("book-list");
+            bookListDiv.innerHTML = "<h2>Daftar Buku:</h2>"; // Reset daftar buku
+            for (let i = 0; i < books.length; i++) {
+                let book = books[i];
+                let bookItem = document.createElement("div");
+                bookItem.classList.add("book-item");
+                bookItem.innerHTML = `<strong>${book.title}</strong> oleh ${book.author} - ${book.available ? 'Tersedia' : 'Tidak Tersedia'}`;
+                bookListDiv.appendChild(bookItem);
+            }
+        }
+
+        // Function to borrow books
+        function borrowBooks() {
+            const bookCount = parseInt(document.getElementById("bookCount").value);
+            const messageDiv = document.getElementById("message");
+
+            if (isNaN(bookCount) || bookCount < 1) {
+                messageDiv.className = "alert";
+                messageDiv.textContent = "Harap masukkan jumlah buku yang valid!";
+                return;
+            }
+
+            // Check the number of available books
+            let availableBooks = books.filter(book => book.available);
+            if (bookCount > availableBooks.length) {
+                messageDiv.className = "alert";
+                messageDiv.textContent = `Hanya ada ${availableBooks.length} buku yang tersedia.`;
+                return;
+            }
+
+            // Borrow the requested number of books
+            let booksToBorrow = [];
+            for (let i = 0; i < books.length && booksToBorrow.length < bookCount; i++) {
+                if (books[i].available) {
+                    booksToBorrow.push(books[i].title);
+                    books[i].available = false;  // Mark the book as borrowed
+                }
+            }
+
+            // Display success message
+            messageDiv.className = "info";
+            messageDiv.textContent = `Anda berhasil meminjam buku: ${booksToBorrow.join(", ")}.`;
+
+            // Update the book list
+            displayBooks();
+        }
+
+        // Show the list of books on page load
+        window.onload = displayBooks;
+    </script>
+
+</body>
+</html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pameran Buku</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .book-item {
+            margin: 15px;
+            text-align: center;
+        }
+
+        .book-item img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .book-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pameran Buku</h1>
+
+        <div class="gallery">
+            <div class="book-item">
+                <img src="buku 1.png" alt="Buku 1" onclick="showDescription('deskripsiBuku1')">
+                <div id="deskripsiBuku1" class="description">
+                    <p><strong>Buku 1:</strong> Dunia sekarang yang tak bisa lepas dari penggunaan internet membuat ketersediaan website terasa penting. Oleh sebab itu, penting untuk tahu dan paham pemrograman web supaya mampu membuat web sendiri demi kepentingan pribadi. Buku ini membantu siapa pun yang ingin membuat web untuk pertama kalinya.!</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="buku 2.jpeg" alt="Buku 2" onclick="showDescription('deskripsiBuku2')">
+                <div id="deskripsiBuku2" class="description">
+                    <p><strong>Buku 2:</strong> Buku ini memahami Konsep Dasar Pemrograman Free Pascal & Database Bagi Mahasiswa merupakan karya Yuliana Mose, Dedi Sorongan dan Agatha C.E.M Jamlean. Buku ini membahas tentang peran algoritma dalam komputasi, dasar-dasar algoritma, interpretasi persoalan ke dalam flowchart, mengenal bahasa pemrograman, tipe data, struktur program, membangun program aplikasi, studi kasus permasalahan sederhana, studi kasus konversi, studi kasus percabangan lanjutan, studi kasus perulangan, studi kasus struktur logika case, studi kasus procedure & function, analisis algoritma program aplikasi terpublikasi jurnal ilmiah, serta menggunakan database.</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="buku 3.png" alt="Buku 3" onclick="showDescription('deskripsiBuku3')">
+                <div id="deskripsiBuku3" class="description">
+                    <p><strong>Buku 3:</strong> Rangkaian konferensi DEXA telah mendapatkan reputasinya sendiri dan posisi yang dihormati sebagai platform untuk pertukaran ide di antara para ahli teori dan praktisi di bidang ilmu komputer yang lebih luas, namun terutama di bidang basis data dan teknologi berbasis pengetahuan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDescription(id) {
+            // Menyembunyikan semua deskripsi
+            let descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(function(description) {
+                description.style.display = 'none';
+            });
+
+            // Menampilkan deskripsi yang diklik
+            let descriptionToShow = document.getElementById(id);
+            descriptionToShow.style.display = 'block';
+        }
+    </script>
