@@ -38,3 +38,21 @@
     <p>Deskripsi buku ini sangat menarik.</p>
 </body>
 </html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 300px;
+    margin: auto;
+}
+
+#login-message {
+    margin-top: 20px;
+}
