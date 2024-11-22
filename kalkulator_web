@@ -1,1 +1,6 @@
-
+kalkulator_web/
+    ├── index.html
+    ├── result.html
+    ├── login.html
+    ├── styles.css
+    └── script.js
