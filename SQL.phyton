@@ -1,0 +1,119 @@
+import tkinter as tk
+from tkinter import messagebox
+import sqlite3
+
+# Membuat koneksi ke database SQLite (jika belum ada akan dibuat)
+conn = sqlite3.connect('database.db')
+cursor = conn.cursor()
+
+# Membuat tabel dengan 4 kolom jika belum ada
+cursor.execute('''CREATE TABLE IF NOT EXISTS data (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nama TEXT,
+                    usia INTEGER,
+                    alamat TEXT)''')
+
+# Fungsi untuk menampilkan data dari database
+def tampilkan_data():
+    for row in tree.get_children():
+        tree.delete(row)
+
+    cursor.execute("SELECT * FROM data")
+    rows = cursor.fetchall()
+    for row in rows:
+        tree.insert("", "end", values=row)
+
+# Fungsi untuk menambah data ke database
+def tambah_data():
+    nama = entry_nama.get()
+    usia = entry_usia.get()
+    alamat = entry_alamat.get()
+
+    if nama == "" or usia == "" or alamat == "":
+        messagebox.showwarning("Input Error", "Semua kolom harus diisi")
+        return
+
+    cursor.execute("INSERT INTO data (nama, usia, alamat) VALUES (?, ?, ?)", (nama, usia, alamat))
+    conn.commit()
+    tampilkan_data()
+    messagebox.showinfo("Sukses", "Data berhasil ditambahkan")
+
+# Fungsi untuk mengubah data yang dipilih
+def ubah_data():
+    selected_item = tree.selection()
+    if not selected_item:
+        messagebox.showwarning("Pilih Data", "Pilih data yang akan diubah")
+        return
+
+    id_data = tree.item(selected_item, 'values')[0]
+    nama = entry_nama.get()
+    usia = entry_usia.get()
+    alamat = entry_alamat.get()
+
+    if nama == "" or usia == "" or alamat == "":
+        messagebox.showwarning("Input Error", "Semua kolom harus diisi")
+        return
+
+    cursor.execute("UPDATE data SET nama=?, usia=?, alamat=? WHERE id=?", (nama, usia, alamat, id_data))
+    conn.commit()
+    tampilkan_data()
+    messagebox.showinfo("Sukses", "Data berhasil diubah")
+
+# Fungsi untuk menghapus data yang dipilih
+def hapus_data():
+    selected_item = tree.selection()
+    if not selected_item:
+        messagebox.showwarning("Pilih Data", "Pilih data yang akan dihapus")
+        return
+
+    id_data = tree.item(selected_item, 'values')[0]
+    cursor.execute("DELETE FROM data WHERE id=?", (id_data,))
+    conn.commit()
+    tampilkan_data()
+    messagebox.showinfo("Sukses", "Data berhasil dihapus")
+
+# Membuat antarmuka pengguna menggunakan Tkinter
+root = tk.Tk()
+root.title("Aplikasi Database")
+
+# Form Input
+label_nama = tk.Label(root, text="Nama:")
+label_nama.grid(row=0, column=0)
+entry_nama = tk.Entry(root)
+entry_nama.grid(row=0, column=1)
+
+label_usia = tk.Label(root, text="Usia:")
+label_usia.grid(row=1, column=0)
+entry_usia = tk.Entry(root)
+entry_usia.grid(row=1, column=1)
+
+label_alamat = tk.Label(root, text="Alamat:")
+label_alamat.grid(row=2, column=0)
+entry_alamat = tk.Entry(root)
+entry_alamat.grid(row=2, column=1)
+
+# Tombol untuk menambah, mengubah, dan menghapus data
+btn_tambah = tk.Button(root, text="Tambah Data", command=tambah_data)
+btn_tambah.grid(row=3, column=0)
+
+btn_ubah = tk.Button(root, text="Ubah Data", command=ubah_data)
+btn_ubah.grid(row=3, column=1)
+
+btn_hapus = tk.Button(root, text="Hapus Data", command=hapus_data)
+btn_hapus.grid(row=3, column=2)
+
+# Treeview untuk menampilkan data
+tree = tk.ttk.Treeview(root, columns=("ID", "Nama", "Usia", "Alamat"), show="headings")
+tree.grid(row=4, column=0, columnspan=3)
+
+tree.heading("ID", text="ID")
+tree.heading("Nama", text="Nama")
+tree.heading("Usia", text="Usia")
+tree.heading("Alamat", text="Alamat")
+
+tampilkan_data()
+
+root.mainloop()
+
+# Menutup koneksi ke database saat aplikasi ditutup
+conn.close()
