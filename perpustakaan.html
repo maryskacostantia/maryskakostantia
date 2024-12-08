@@ -1,12 +1,26 @@
-  <div class="dropdown">
-    <button class="mainmenubtn">Main Menu</button>
-    <div class="dropdown-child">
-      <a href="Kalkulator Sederhana.html">Kalkulator Sederhana</a>
-      <a href="login.html">Login</a>
-      <a href="Script.php">Percobaan PHP</a>
-    </div>
-  </div>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-</body>
-</html>
+<h1>Kalkulator Sederhana</h1>
+
+<form id="calculator-form" action="result.html" method="GET">
+    <label for="num1">Bilangan Pertama:</label>
+    <input type="number" id="num1" name="num1" required><br><br>
+
+    <label for="num2">Bilangan Kedua:</label>
+    <input type="number" id="num2" name="num2" required><br><br>
+
+    <label for="operation">Pilih Operasi:</label>
+    <select id="operation" name="operation">
+        <option value="+">Penjumlahan (+)</option>
+        <option value="-">Pengurangan (-)</option>
+        <option value="*">Perkalian (*)</option>
+        <option value="/">Pembagian (/)</option>
+    </select><br><br>
